@@ -16,7 +16,7 @@ def evaluate_skills(skills: dict):
 
 def get_roadmap(skills):
     try:
-        with open("roadmap_templates.json", "r") as f:
+        with open("roadmap_template.json", "r") as f:
             templates = json.load(f)
         return "\n\n".join([f"### {s}\n{templates.get(s, 'Coming Soon...')}" for s in skills])
     except:
